@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Professional Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="calculator">
+
+    <section class="calculator-card">
+
+      <header class="calculator-header">
+        <div>
+          <h1>Calculator</h1>
+          <p>Standard</p>
+        </div>
+
+        <button
+          id="historyToggle"
+          class="icon-button"
+          type="button"
+          aria-label="Show calculation history"
+          title="History"
+        >
+          ↶
+        </button>
+      </header>
+
+
+      <section class="display" aria-label="Calculator display">
+
+        <div
+          id="expression"
+          class="expression"
+          aria-live="polite"
+        ></div>
+
+        <div
+          id="result"
+          class="result"
+          aria-live="polite"
+        >
+          0
+        </div>
+
+      </section>
+
+
+      <section class="keypad">
+
+        <button
+          class="key function"
+          data-action="clear"
+          type="button"
+        >
+          AC
+        </button>
+
+        <button
+          class="key function"
+          data-action="delete"
+          type="button"
+        >
+          DEL
+        </button>
+
+        <button
+          class="key function"
+          data-action="percent"
+          type="button"
+        >
+          %
+        </button>
+
+        <button
+          class="key operator"
+          data-value="/"
+          type="button"
+        >
+          ÷
+        </button>
+
+
+        <button
+          class="key number"
+          data-value="7"
+          type="button"
+        >
+          7
+        </button>
+
+        <button
+          class="key number"
+          data-value="8"
+          type="button"
+        >
+          8
+        </button>
+
+        <button
+          class="key number"
+          data-value="9"
+          type="button"
+        >
+          9
+        </button>
+
+        <button
+          class="key operator"
+          data-value="*"
+          type="button"
+        >
+          ×
+        </button>
+
+
+        <button
+          class="key number"
+          data-value="4"
+          type="button"
+        >
+          4
+        </button>
+
+        <button
+          class="key number"
+          data-value="5"
+          type="button"
+        >
+          5
+        </button>
+
+        <button
+          class="key number"
+          data-value="6"
+          type="button"
+        >
+          6
+        </button>
+
+        <button
+          class="key operator"
+          data-value="-"
+          type="button"
+        >
+          −
+        </button>
+
+
+        <button
+          class="key number"
+          data-value="1"
+          type="button"
+        >
+          1
+        </button>
+
+        <button
+          class="key number"
+          data-value="2"
+          type="button"
+        >
+          2
+        </button>
+
+        <button
+          class="key number"
+          data-value="3"
+          type="button"
+        >
+          3
+        </button>
+
+        <button
+          class="key operator"
+          data-value="+"
+          type="button"
+        >
+          +
+        </button>
+
+
+        <button
+          class="key function"
+          data-action="sign"
+          type="button"
+        >
+          +/−
+        </button>
+
+        <button
+          class="key number"
+          data-value="0"
+          type="button"
+        >
+          0
+        </button>
+
+        <button
+          class="key number"
+          data-action="decimal"
+          type="button"
+        >
+          .
+        </button>
+
+        <button
+          class="key equals"
+          data-action="calculate"
+          type="button"
+        >
+          =
+        </button>
+
+      </section>
+
+
+      <aside
+        id="historyPanel"
+        class="history-panel"
+        aria-hidden="true"
+      >
+
+<div class="history-header">
+
+  <div class="history-title">
+    <button
+      id="closeHistory"
+      class="back-button"
+      type="button"
+      aria-label="Back to calculator"
+      title="Back to calculator"
+    >
+      ←
+    </button>
+
+    <h2>History</h2>
+  </div>
+
+  <button
+    id="clearHistory"
+    class="clear-history"
+    type="button"
+  >
+    Clear
+  </button>
+
+</div>
+
+        <div id="historyList" class="history-list">
+          <p class="empty-history">
+            No calculations yet.
+          </p>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
